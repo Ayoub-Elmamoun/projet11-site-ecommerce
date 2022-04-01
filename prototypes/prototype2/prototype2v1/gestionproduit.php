@@ -9,13 +9,9 @@
      private function getConnection()
      {
          $this->Connection = mysqli_connect('localhost', 'admin', 'admin', 'site-e-commerce');
-         if ($this->Connection) {
-
-             echo "connected";
-             
-         } else {
-            die('Could not connect to database server');
-         }
+            if (!$this->Connection) {
+                die('Could not connect to database server');
+            }
 
          return $this->Connection; 
     }
