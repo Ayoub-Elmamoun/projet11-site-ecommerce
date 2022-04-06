@@ -23,8 +23,17 @@ class creatdb {
         // creat connction and check it 
 
         $this->connection = mysqli_connect($servername,$username,$user_password);
-        if (!$this->connection) 
+        if (!$this->connection)
+        {
             die ("connection failed".mysli_connection_error());
+        }
+
+        //creat query and check if it exist
+        $sql = "CREAT DATBASE IF NOT EXIST  $dbname" ;
+        if (mysqli_query($this->connection,$sql)) {
+
+            $this->connection =sqli_connect($servername,$username,$user_password,$dbname);
+            
         }
 
     }
