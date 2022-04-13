@@ -1,5 +1,6 @@
 <?php 
 
+require_once "./stuff/requirement.php";
 
 ?>
 
