@@ -13,7 +13,7 @@ class CreateDb {
         $servername ="localhost",
         $username ="root",
         $password ="",
-        $dbname ="site_ecommerce",
+        $dbname ="site-ecommerce",
         $tablename ="products") 
         {
         $this->servername = $servername;
