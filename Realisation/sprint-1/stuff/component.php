@@ -3,34 +3,51 @@
 
  function component($product_name,$product_price,$product_id){
    $element = "
-   <div class=\"col mb-5\">
-   <div class=\"card h-100\">
-       <!-- Sale badge-->
-       <div class=\"badge bg-dark text-white position-absolute\" style=\"top: 0.5rem; right: 0.5rem\">Sale</div>
-       <!-- Product image-->
-       <img class=\"card-img-top\" src=\"https://dummyimage.com/450x300/dee2e6/6c757d.jpg\" alt=\"...\" />
-       <!-- Product details-->
-       <div class=\"card-body p-4\">
-           <div class=\"text-center\">
-               <!-- Product name-->
-               <h5 class=\"fw-bolder\">$product_name</h5>
-               <!-- Product reviews-->
-               <div class=\"d-flex justify-content-center small text-warning mb-2\">
-                   <div class=\"bi-star-fill\"></div>
-                   <div class=\"bi-star-fill\"></div>
-                   <div class=\"bi-star-fill\"></div>
-                   <div class=\"bi-star-fill\"></div>
-                   <div class=\"bi-star-fill\"></div>
-               </div>
-               <!-- Product price-->
-               <span class=\"text-muted text-decoration-line-through\">$500.00</span>
-               $$product_price
+   <div class=\"col\">
+   <div class=\"product__item-3 mb-40\">
+       <div class=\"product__thumb-3 fix p-relative w-img\">
+           <a href=\"product-details.html\">
+               <img src=\"assets/img/products/2/product-1.jpg\" alt=\"\">
+           </a>
+           <div class=\"product__flash-3\">
+               <span>15%</span>
+           </div>
+           <div class=\"product__action product__action-3 transition-3\">
+               <ul>
+                  <li>
+                     <a href=\"#\">
+                       <i class=\"fas fa-heart\"></i>                      
+                     </a>
+                  </li>
+                  <li>
+                       <a href=\"javascript:void(0)\" data-bs-toggle=\"modal\" data-bs-target=\"#productModalId\">
+                           <i class=\"fas fa-eye\"></i>
+                       </a>
+                  </li>
+                  <li>
+                       <a href=\"#\">
+                           <i class=\"fas fa-signal-4\"></i>
+                       </a>
+                  </li>
+               </ul>
            </div>
        </div>
-       <!-- Product actions-->
-       <div class=\"card-footer p-4 pt-0 border-top-0 bg-transparent\">
-           <div class=\"text-center\"><a class=\"btn btn-outline-dark mt-auto\" href=\"#\" name=\"add\">Add to cart</a>
-           <input type=\"hidden\" name=\"product_id\" value=\"$product_id\">
+       <div class=\"product__content-3\">
+           <div class=\"product__tag-3\">
+               <span>
+                   <a href=\"#\">Wooden</a>
+               </span>
+           </div>
+           <h3 class=\"product__title-3\">
+               <a href=\"product-details.html\">$product_name</a>
+           </h3>
+           <div class=\"product__price-3 fix\">
+               <span class=\"price\">$$product_price</span>
+               <div class=\"product__add-cart-3 transition-3\">
+                   <a href=\"cart.php\" class=\"add-to-cart-btn-2\" name=\"add\">+ Add To Cart</a>
+                   <input type=\"hidden\" name=\"product_id\" value=\"$product_id\">
+
+               </div>
            </div>
        </div>
    </div>

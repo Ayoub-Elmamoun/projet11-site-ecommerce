@@ -1,25 +1,5 @@
 <?php 
 
-require_once "./stuff/requirement.php";
-
- // start session
- session_start();
- if(isset($_POST['add'])){
-
-     if (isset($_SESSION['cart'])) {
-
-         print_r($_SESSION['cart']);
-     }
-     else{
-         $item_array = array(
-             $product_id = $_POST['product_id']
-         );
-     }
-
- }
-
-
-?>
 
 ?>
 
@@ -401,6 +381,95 @@ require_once "./stuff/requirement.php";
 
 
 
+            <!-- banner area start 
+            <section class="banner__area mb-30">
+                <div class="container">
+                    <div class="section__title-line section__title-line-2 mb-30">
+                        <div class="row">
+                            <div class="col-xxl-6 col-sm-8 col-6">
+                                <div class="section__title-wrapper d-flex align-items-center">
+                                    <span class="section__title-icon mr-15">
+                                        <img src="assets/img/icon/section-icon-2.png" alt="">
+                                    </span>
+                                    <h2 class="section__title-3">Trending Offers</h2>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-sm-4 col-6">
+                                <div class="product__hot-more d-flex justify-content-end">
+                                    <a href="shop.html" class="more-btn">View All Offers <i class="far fa-angle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner__slider-active owl-carousel">
+                        <div class="banner__slider-item">
+                            <div class="row">
+                                <div class="col-xxl-6 col-lg-6">
+                                    <div class="banner__item-2 p-relative fix mb-30">
+                                        <div class="banner__thumb w-img">
+                                            <img src="assets/img/products/banner/2/product-banner-1.jpg" alt="">
+                                        </div>
+                                        <div class="banner__content-2">
+                                            <h3 class="banner__title-2">
+                                                <a href="shop.html">A Chair Set For <br> Holidays</a>
+                                            </h3>
+                                            <p>Go to place where you're not going stresed</p>
+                                            <a href="shop.html" class="b-btn-3">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-6 col-lg-6">
+                                    <div class="banner__item-2 p-relative fix mb-30">
+                                        <div class="banner__thumb w-img">
+                                            <img src="assets/img/products/banner/2/product-banner-2.jpg" alt="">
+                                        </div>
+                                        <div class="banner__content-2">
+                                            <h3 class="banner__title-2">
+                                                <a href="shop.html">Living For The <br>Little Things</a>
+                                            </h3>
+                                            <p>Go to place where you're not going stresed</p>
+                                            <a href="shop.html" class="b-btn-3">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner__slider-item">
+                            <div class="row">
+                                <div class="col-xxl-6 col-lg-6">
+                                    <div class="banner__item-2 p-relative fix mb-30">
+                                        <div class="banner__thumb w-img">
+                                            <img src="assets/img/products/banner/2/product-banner-3.jpg" alt="">
+                                        </div>
+                                        <div class="banner__content-2">
+                                            <h3 class="banner__title-2">
+                                                <a href="shop.html">A Cushion Set For <br> Holidays</a>
+                                            </h3>
+                                            <p>Go to place where you're not going stresed</p>
+                                            <a href="shop.html" class="b-btn-3">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-6 col-lg-6">
+                                    <div class="banner__item-2 p-relative fix mb-30">
+                                        <div class="banner__thumb w-img">
+                                            <img src="assets/img/products/banner/2/product-banner-4.jpg" alt="">
+                                        </div>
+                                        <div class="banner__content-2">
+                                            <h3 class="banner__title-2">
+                                                <a href="shop.html">Living For The <br>Enjoyable Things</a>
+                                            </h3>
+                                            <p>Go to place where you're not going stresed</p>
+                                            <a href="shop.html" class="b-btn-3">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+             banner area end -->
 
             <!-- product area start -->
             <section class="product__area pb-30">
@@ -434,15 +503,458 @@ require_once "./stuff/requirement.php";
                                     <div class="tab-content" id="trendingTabContent">
                                         <div class="tab-pane fade show active" id="new-2" role="tabpanel" aria-labelledby="new-2">
                                             <div class="row row-cols-xxl-5 row-cols-xl-5 row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1">
-                                            <?php
-                                                $result = $database->getData();
-                                                while($row = mysqli_fetch_assoc($result)){
-                                                    component($row['product_name'],$row['product_price'],$row['id']);
-                                                    }
-                                            
-                                            ?>
-
-
+                                                <div class="col">
+                                                    <div class="product__item-3 mb-40">
+                                                        <div class="product__thumb-3 fix p-relative w-img">
+                                                            <a href="product-details.html">
+                                                                <img src="assets/img/products/2/product-1.jpg" alt="">
+                                                            </a>
+                                                            <div class="product__flash-3">
+                                                                <span>15%</span>
+                                                            </div>
+                                                            <div class="product__action product__action-3 transition-3">
+                                                                <ul>
+                                                                   <li>
+                                                                      <a href="#">
+                                                                        <i class="fas fa-heart"></i>                      
+                                                                      </a>
+                                                                   </li>
+                                                                   <li>
+                                                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#productModalId">
+                                                                            <i class="fas fa-eye"></i>
+                                                                        </a>
+                                                                   </li>
+                                                                   <li>
+                                                                        <a href="#">
+                                                                            <i class="fas fa-signal-4"></i>
+                                                                        </a>
+                                                                   </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product__content-3">
+                                                            <div class="product__tag-3">
+                                                                <span>
+                                                                    <a href="#">Wooden</a>
+                                                                </span>
+                                                            </div>
+                                                            <h3 class="product__title-3">
+                                                                <a href="product-details.html">Matin Small Table Lamp</a>
+                                                            </h3>
+                                                            <div class="product__price-3 fix">
+                                                                <span class="price">$180.00</span>
+                                                                <div class="product__add-cart-3 transition-3">
+                                                                    <a href="cart.php" class="add-to-cart-btn-2">+ Add To Cart</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="product__item-3 mb-40">
+                                                        <div class="product__thumb-3 fix p-relative w-img">
+                                                            <a href="product-details.html">
+                                                                <img src="assets/img/products/2/product-2.jpg" alt="">
+                                                            </a>
+                                                            <div class="product__action product__action-3 transition-3">
+                                                                <ul>
+                                                                   <li>
+                                                                      <a href="#">
+                                                                        <i class="fas fa-heart"></i>                      
+                                                                      </a>
+                                                                   </li>
+                                                                   <li>
+                                                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#productModalId">
+                                                                            <i class="fas fa-eye"></i>
+                                                                        </a>
+                                                                   </li>
+                                                                   <li>
+                                                                        <a href="#">
+                                                                            <i class="fas fa-signal-4"></i>
+                                                                        </a>
+                                                                   </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product__content-3">
+                                                            <div class="product__tag-3">
+                                                                <span>
+                                                                    <a href="#">Stell</a>
+                                                                </span>
+                                                            </div>
+                                                            <h3 class="product__title-3">
+                                                                <a href="product-details.html">Matin Small Mog</a>
+                                                            </h3>
+                                                            <div class="product__price-3 fix">
+                                                                <span class="price">$180.00</span>
+                                                                <div class="product__add-cart-3 transition-3">
+                                                                    <a href="cart.php" class="add-to-cart-btn-2">+ Add To Cart</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="product__item-3 mb-40">
+                                                        <div class="product__thumb-3 fix p-relative w-img">
+                                                            <a href="product-details.html">
+                                                                <img src="assets/img/products/2/product-3.jpg" alt="">
+                                                            </a>
+                                                            <div class="product__action product__action-3 transition-3">
+                                                                <ul>
+                                                                   <li>
+                                                                      <a href="#">
+                                                                        <i class="fas fa-heart"></i>                      
+                                                                      </a>
+                                                                   </li>
+                                                                   <li>
+                                                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#productModalId">
+                                                                            <i class="fas fa-eye"></i>
+                                                                        </a>
+                                                                   </li>
+                                                                   <li>
+                                                                        <a href="#">
+                                                                            <i class="fas fa-signal-4"></i>
+                                                                        </a>
+                                                                   </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product__content-3">
+                                                            <div class="product__tag-3">
+                                                                <span>
+                                                                    <a href="#">Living Room</a>
+                                                                </span>
+                                                            </div>
+                                                            <h3 class="product__title-3">
+                                                                <a href="product-details.html">Plain Side Table White</a>
+                                                            </h3>
+                                                            <div class="product__price-3 fix">
+                                                                <span class="price">$180.00</span>
+                                                                <div class="product__add-cart-3 transition-3">
+                                                                    <a href="cart.php" class="add-to-cart-btn-2">+ Add To Cart</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="product__item-3 mb-40">
+                                                        <div class="product__thumb-3 fix p-relative w-img">
+                                                            <a href="product-details.html">
+                                                                <img src="assets/img/products/2/product-4.jpg" alt="">
+                                                            </a>
+                                                            <div class="product__action product__action-3 transition-3">
+                                                                <ul>
+                                                                   <li>
+                                                                      <a href="#">
+                                                                        <i class="fas fa-heart"></i>                      
+                                                                      </a>
+                                                                   </li>
+                                                                   <li>
+                                                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#productModalId">
+                                                                            <i class="fas fa-eye"></i>
+                                                                        </a>
+                                                                   </li>
+                                                                   <li>
+                                                                        <a href="#">
+                                                                            <i class="fas fa-signal-4"></i>
+                                                                        </a>
+                                                                   </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product__content-3">
+                                                            <div class="product__tag-3">
+                                                                <span>
+                                                                    <a href="#">Living Room</a>
+                                                                </span>
+                                                            </div>
+                                                            <h3 class="product__title-3">
+                                                                <a href="product-details.html">Wooden Single Drawer</a>
+                                                            </h3>
+                                                            <div class="product__price-3 fix">
+                                                                <span class="price">$180.00</span>
+                                                                <div class="product__add-cart-3 transition-3">
+                                                                    <a href="cart.php" class="add-to-cart-btn-2">+ Add To Cart</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="product__item-3 mb-40">
+                                                        <div class="product__thumb-3 fix p-relative w-img">
+                                                            <a href="product-details.html">
+                                                                <img src="assets/img/products/2/product-5.jpg" alt="">
+                                                            </a>
+                                                            <div class="product__flash-3">
+                                                                <span>15%</span>
+                                                            </div>
+                                                            <div class="product__action product__action-3 transition-3">
+                                                                <ul>
+                                                                   <li>
+                                                                      <a href="#">
+                                                                        <i class="fas fa-heart"></i>                      
+                                                                      </a>
+                                                                   </li>
+                                                                   <li>
+                                                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#productModalId">
+                                                                            <i class="fas fa-eye"></i>
+                                                                        </a>
+                                                                   </li>
+                                                                   <li>
+                                                                        <a href="#">
+                                                                            <i class="fas fa-signal-4"></i>
+                                                                        </a>
+                                                                   </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product__content-3">
+                                                            <div class="product__tag-3">
+                                                                <span>
+                                                                    <a href="#">Wooden</a>
+                                                                </span>
+                                                            </div>
+                                                            <h3 class="product__title-3">
+                                                                <a href="product-details.html">Smart Watches Wood</a>
+                                                            </h3>
+                                                            <div class="product__price-3 fix">
+                                                                <span class="price">$180.00</span>
+                                                                <div class="product__add-cart-3 transition-3">
+                                                                    <a href="cart.php" class="add-to-cart-btn-2">+ Add To Cart</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="product__item-3 mb-40">
+                                                        <div class="product__thumb-3 fix p-relative w-img">
+                                                            <a href="product-details.html">
+                                                                <img src="assets/img/products/2/product-6.jpg" alt="">
+                                                            </a>
+                                                            <div class="product__action product__action-3 transition-3">
+                                                                <ul>
+                                                                   <li>
+                                                                      <a href="#">
+                                                                        <i class="fas fa-heart"></i>                      
+                                                                      </a>
+                                                                   </li>
+                                                                   <li>
+                                                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#productModalId">
+                                                                            <i class="fas fa-eye"></i>
+                                                                        </a>
+                                                                   </li>
+                                                                   <li>
+                                                                        <a href="#">
+                                                                            <i class="fas fa-signal-4"></i>
+                                                                        </a>
+                                                                   </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product__content-3">
+                                                            <div class="product__tag-3">
+                                                                <span>
+                                                                    <a href="#">Stell</a>
+                                                                </span>
+                                                            </div>
+                                                            <h3 class="product__title-3">
+                                                                <a href="product-details.html">Panton Tunior Chair</a>
+                                                            </h3>
+                                                            <div class="product__price-3 fix">
+                                                                <span class="price">$180.00</span>
+                                                                <div class="product__add-cart-3 transition-3">
+                                                                    <a href="cart.php" class="add-to-cart-btn-2">+ Add To Cart</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="product__item-3 mb-40">
+                                                        <div class="product__thumb-3 fix p-relative w-img">
+                                                            <a href="product-details.html">
+                                                                <img src="assets/img/products/2/product-7.jpg" alt="">
+                                                            </a>
+                                                            <div class="product__flash-3">
+                                                                <span>20%</span>
+                                                            </div>
+                                                            <div class="product__action product__action-3 transition-3">
+                                                                <ul>
+                                                                   <li>
+                                                                      <a href="#">
+                                                                        <i class="fas fa-heart"></i>                      
+                                                                      </a>
+                                                                   </li>
+                                                                   <li>
+                                                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#productModalId">
+                                                                            <i class="fas fa-eye"></i>
+                                                                        </a>
+                                                                   </li>
+                                                                   <li>
+                                                                        <a href="#">
+                                                                            <i class="fas fa-signal-4"></i>
+                                                                        </a>
+                                                                   </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product__content-3">
+                                                            <div class="product__tag-3">
+                                                                <span>
+                                                                    <a href="#">Living Room</a>
+                                                                </span>
+                                                            </div>
+                                                            <h3 class="product__title-3">
+                                                                <a href="product-details.html">Eames Lounge Chair</a>
+                                                            </h3>
+                                                            <div class="product__price-3 fix">
+                                                                <span class="price">$180.00</span>
+                                                                <div class="product__add-cart-3 transition-3">
+                                                                    <a href="cart.php" class="add-to-cart-btn-2">+ Add To Cart</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="product__item-3 mb-40">
+                                                        <div class="product__thumb-3 fix p-relative w-img">
+                                                            <a href="product-details.html">
+                                                                <img src="assets/img/products/2/product-8.jpg" alt="">
+                                                            </a>
+                                                            <div class="product__action product__action-3 transition-3">
+                                                                <ul>
+                                                                   <li>
+                                                                      <a href="#">
+                                                                        <i class="fas fa-heart"></i>                      
+                                                                      </a>
+                                                                   </li>
+                                                                   <li>
+                                                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#productModalId">
+                                                                            <i class="fas fa-eye"></i>
+                                                                        </a>
+                                                                   </li>
+                                                                   <li>
+                                                                        <a href="#">
+                                                                            <i class="fas fa-signal-4"></i>
+                                                                        </a>
+                                                                   </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product__content-3">
+                                                            <div class="product__tag-3">
+                                                                <span>
+                                                                    <a href="#">Living Room</a>
+                                                                </span>
+                                                            </div>
+                                                            <h3 class="product__title-3">
+                                                                <a href="product-details.html">Wine Bottle Lantern</a>
+                                                            </h3>
+                                                            <div class="product__price-3 fix">
+                                                                <span class="price">$180.00</span>
+                                                                <div class="product__add-cart-3 transition-3">
+                                                                    <a href="cart.php" class="add-to-cart-btn-2">+ Add To Cart</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="product__item-3 mb-40">
+                                                        <div class="product__thumb-3 fix p-relative w-img">
+                                                            <a href="product-details.html">
+                                                                <img src="assets/img/products/2/product-9.jpg" alt="">
+                                                            </a>
+                                                            <div class="product__action product__action-3 transition-3">
+                                                                <ul>
+                                                                   <li>
+                                                                      <a href="#">
+                                                                        <i class="fas fa-heart"></i>                      
+                                                                      </a>
+                                                                   </li>
+                                                                   <li>
+                                                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#productModalId">
+                                                                            <i class="fas fa-eye"></i>
+                                                                        </a>
+                                                                   </li>
+                                                                   <li>
+                                                                        <a href="#">
+                                                                            <i class="fas fa-signal-4"></i>
+                                                                        </a>
+                                                                   </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product__content-3">
+                                                            <div class="product__tag-3">
+                                                                <span>
+                                                                    <a href="#">Living Room</a>
+                                                                </span>
+                                                            </div>
+                                                            <h3 class="product__title-3">
+                                                                <a href="product-details.html">Cotton Tunior Chair</a>
+                                                            </h3>
+                                                            <div class="product__price-3 fix">
+                                                                <span class="price">$180.00</span>
+                                                                <div class="product__add-cart-3 transition-3">
+                                                                    <a href="cart.php" class="add-to-cart-btn-2">+ Add To Cart</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="product__item-3 mb-40">
+                                                        <div class="product__thumb-3 fix p-relative w-img">
+                                                            <a href="product-details.html">
+                                                                <img src="assets/img/products/2/product-10.jpg" alt="">
+                                                            </a>
+                                                            <div class="product__flash-3">
+                                                                <span>20%</span>
+                                                            </div>
+                                                            <div class="product__action product__action-3 transition-3">
+                                                                <ul>
+                                                                   <li>
+                                                                      <a href="#">
+                                                                        <i class="fas fa-heart"></i>                      
+                                                                      </a>
+                                                                   </li>
+                                                                   <li>
+                                                                        <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#productModalId">
+                                                                            <i class="fas fa-eye"></i>
+                                                                        </a>
+                                                                   </li>
+                                                                   <li>
+                                                                        <a href="#">
+                                                                            <i class="fas fa-signal-4"></i>
+                                                                        </a>
+                                                                   </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product__content-3">
+                                                            <div class="product__tag-3">
+                                                                <span>
+                                                                    <a href="#">Living Room</a>
+                                                                </span>
+                                                            </div>
+                                                            <h3 class="product__title-3">
+                                                                <a href="product-details.html">Porsalin Plate</a>
+                                                            </h3>
+                                                            <div class="product__price-3 fix">
+                                                                <span class="price">$150.00</span>
+                                                                <div class="product__add-cart-3 transition-3">
+                                                                    <a href="cart.php" class="add-to-cart-btn-2">+ Add To Cart</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="tab-pane fade" id="featured-2" role="tabpanel" aria-labelledby="featured-2">
