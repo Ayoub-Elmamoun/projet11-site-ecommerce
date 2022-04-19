@@ -2,7 +2,7 @@
 
 <?php
 
-$conn= mysqli_connect("localhost",'hicham','mlikihii','e-commerce');
+$conn= mysqli_connect("localhost",'root','','e-commerce');
 
 if(isset($_POST["update"])){
 
