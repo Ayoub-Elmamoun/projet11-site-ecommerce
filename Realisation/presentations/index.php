@@ -295,7 +295,7 @@ $cartLineList = $cart->getCartLineList()[0];
                                 </div>
                             </div>
                         </div>
-                        <div class="row mb-n4 mb-sm-n10 g-3 g-sm-6">
+                        <div class="row mb-n4 mb-sm-n10 g-4 g-sm-6">
                             <div class="col-6 col-lg-4 mb-4 mb-sm-9">
                                 <!--== Start Product Item ==-->
                                 <!-- produit -->
