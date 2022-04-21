@@ -79,12 +79,12 @@ if(!empty($_POST)){
               <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
 
                 <li class="nav-item">
-                  <a class="nav-link" href="insert.php">Ajouter Produit</a>
+                  <a class="nav-link" href="./Ajoute.php">Ajouter Produit</a>
                 </li>
 
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.php">Naviger Produits</a>
+                  <a class="nav-link" href="./table.php">Naviger Produits</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="../categorie/index.php">Gestion Categorie</a>
