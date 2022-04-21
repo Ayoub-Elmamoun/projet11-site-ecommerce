@@ -270,7 +270,7 @@ $cartLineList = $cart->getCartLineList()[0];
                             <div class="col-6 col-lg-4 col-lg-2 col-xl-2">
                                 <!--== Start Product Category Item ==-->
                                 <a href="categorie.php?name=<?php echo $valuee->getNom_Categorie() ?>" class="product-category-item">
-                                <img class="icon" src="../assets/images/shop/category/<?php echo $valuee->getphoto_Categorie() ?>" width="70" height="80" alt="Image-HasTech">
+                                <img class="icon" src="./assets/images/shop/category/<?php echo $valuee->getphoto_Categorie() ?>" width="70" height="80" alt="Image-HasTech">
                                 <h3 class="title"><?php echo $valuee->getNom_Categorie() ?> </h3>
                                 <span class="flag-new">new</span>
                             </a>
@@ -635,7 +635,7 @@ $cartLineList = $cart->getCartLineList()[0];
                         <li class="aside-product-list-item">
                             <a href="#/" class="remove">×</a>
                             <a href="product-details.php">
-                                <img src="../img/<?php echo $value->getProduct()->getImage()?>" width="68" height="84"
+                                <img src="./img/<?php echo $value->getProduct()->getImage()?>" width="68" height="84"
                                     alt="Image">
                                 <span class="product-title"><?= $value->getProduct()->getName() ?></span>
                             </a>
