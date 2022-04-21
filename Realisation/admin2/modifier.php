@@ -42,180 +42,88 @@ if(!empty($_POST)){
 } 
 ?>
 
-<head>
-    <!-- Required meta tags-->
-    <meta charset="UTF-8">
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="au theme template">
-    <meta name="author" content="Hau Nguyen">
-    <meta name="keywords" content="au theme template">
 
-    <!-- Title Page-->
-    <title>Forms</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap" rel="stylesheet">
 
-    <!-- Fontfaces CSS-->
-    <link href="css/font-face.css" rel="stylesheet" media="all">
-    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
-    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-    <link rel="stylesheet" href="css/templatemo-style.css">
-    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
 
-    <!-- Bootstrap CSS-->
-    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
 
-    <!-- Vendor CSS-->
-    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
-    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
-    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
-    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
-    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
-    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
-    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <!-- Main CSS-->
-    <link rel="stylesheet" href="css/costumer.css">
-    <link href="css/theme.css" rel="stylesheet" media="all">
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
 
-</head>
-<!-- 
-<body class="animsition">
-    <div class="page-wrapper">
-         HEADER MOBILE-->
-        <header class="header-mobile d-block d-lg-none">
-            <div class="header-mobile__bar">
-                <div class="container-fluid">
-                    <div class="header-mobile-inner">
-                        <a class="logo" href="index.html">
-                        </a>
-                        <button class="hamburger hamburger--slider" type="button">
-                            <span class="hamburger-box">
-                                <span class="hamburger-inner"></span>
-                            </span>
-                        </button>
-                    </div>
+    <title>Insert Categorie</title>
+  </head>
+
+  <body style="background-image: url('images/nature-background.jpg');">
+
+    <header role="banner">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+          <div class="container">
+            <a class="navbar-brand" href="main.php">CRUD PRODUIT</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample05">
+              <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
+
+                <li class="nav-item">
+                  <a class="nav-link" href="insert.php">Ajouter Produit</a>
+                </li>
+
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.php">Naviger Produits</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../categorie/index.php">Gestion Categorie</a>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </nav>
+    </header> 
+      <!-- END header -->
+
+      <div class="container d-flex justify-content-center" style="padding-top:90px;">
+
+      <div class="row col-lg-10 col-sm-12 col-md-12">
+        <div class="col-sm-12 col-md-12 col-lg-12 mx-auto">
+          <div class="card border-0 shadow rounded-4 my-5 ">
+            <div class="card-header text-center">
+              <div>AJOUTER PRODUIT</div>
+            </div>
+
+            <div class="card-body ">
+
+              <form method="POST" enctype="multipart/form-data" id="formSubmit" class="row g-3 ">
+                <div class="col-md-4 ">
+                <input type="hidden" name="id" value="<?php echo $value->getId_Produit() ?>">
+                  <label for="inputAuthor" class="form-label"></label>
+                  <input type="text" required name="nom_produit" value="<?php echo $value->getNom_Produit() ?>"  class="form-control text-center" id="inputAuthor" placeholder="Nom du produit">
                 </div>
-            </div>
-            
-        </header>
-        <!-- END HEADER MOBILE-->
-        
-            <!-- HEADER DESKTOP-->
-           
-         <!-- PAGE CONTAINER-->
-       
 
-            <!-- MAIN CONTENT-->
-            
-           
-       
-        <!-- MENU SIDEBAR-->
-        <aside class="menu-sidebar d-none d-lg-block">
-       
-            <div class="menu-sidebar__content js-scrollbar1">
-                <nav class="navbar-sidebar">
-                    <ul class="list-unstyled navbar__list">
-                        <li class="has-sub">
-                           
-                        <li>
-                            <a href="table.php">
-                                <i class="fas fa-table"></i>Tableau</a>
-                        </li>
-                        <li class="active">
-                            <a href="Ajoute.php">
-                                <i class="far fa-check-square"></i>Insérer</a>
-                        </li>
-                        <li>
-                            <a href="Recherche.php">
-                                <i class="fas fa-search"></i>Recherche</a>
-                                
-                        </li>
-                        </li>
-                     
-                    </ul>     
-                </nav>
-            </div>
-        </aside>
-        <!-- END MENU SIDEBAR-->
+                <div class="col-md-4">
+                  <label for=" inputPrix" class="form-label"></label>
+                  <input  type="text" required name="prix" value="<?php echo $value->getPrix() ?>" class="form-control text-center" id="inputPrix" placeholder="Prix du produit">
+                </div>
 
-        <!-- PAGE CONTAINER-->
-        <div class="page-container">
-            <!-- HEADER DESKTOP-->
-            
-            
-            <!-- MAIN CONTENT-->
-            <div class="main-content">
-            <h1 class="titre text-center ">
-           <strong>MODIFIER LE PRODUIT</strong>
-           </h1>
-                <div class="section__content section__content--p30">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="card">
-
-                                    <!-- form -->
-                                    <div class="card-header">Modifier</div>
-                                    <div class="card-body ">
-                                    <div class="row tm-edit-product-row  ">
-                                    <div class="col-xl-6 col-lg-6 col-md-12">
-                                       
-                                        <!-- start modifier -->
-                                           
-                                        <form method="POST" enctype='multipart/form-data' class="tm-edit-product-form">
-                  <div class="form-group mb-3">
-                    <input type="hidden" name="id" value="<?php echo $value->getId_Produit() ?>">
-                    <label
-                      for="name"
-                      >Produit
-                    </label>
-                    <input
-                      id="name"
-                      name="nom_produit"
-                      type="text"
-                      class="form-control validate"
-                      required
-                      value="<?php echo $value->getNom_Produit() ?>"
-                    >
-                  </div>
-                  <div class="form-group mb-3">
-                    <label
-                      for="name"
-                      >Prix
-                    </label>
-                    <input
-                      id="name"
-                      name="prix"
-                      type="text"
-                      class="form-control validate"
-                      required
-                      value="<?php echo $value->getPrix() ?>"
-                    />
-                  </div>
-                  <div class="form-group mb-3">
-                    <label
-                      for="description"
-                      >Description</label
-                    >
-                    <input
-                      class="form-control validate"
-                      rows="3"
-                      required
-					            name="description"
-                      value="<?php echo $value->getDescription() ?>"
-                    >
-                  </div>
-                  <div class="form-group mb-3">
-                    <label
-                      for="category"
-                      >Categorie</label
-                    >
+                <div class="col-md-4">
+                    <label for="category"></label>
                     <select
-                      class="custom-select tm-select-accounts"
-                      id="category"
-					            name="categorie_produit"
-
-                    >
+                      class="custom-select tm-select-accounts" id="category" name="categorie_produit">
                    
                     <option selected><?php echo $value->getNom_Categorie() ?></option>
                    <?php $afficherdata = $gestion -> afficherCategorie() ?>
@@ -224,107 +132,57 @@ if(!empty($_POST)){
                       
                       
                     </select>
-                  </div>
-                  <div class="row">
-                      <div class="form-group mb-3 col-xs-12 col-sm-6">
-                          <label
-                            for="expire_date"
-                            >Expiration Date
-                          </label>
-                          <input
-                            id="expire_date"
-                            name="date_d'expiration"
-                            type="date"
-                            class="form-control validate"
-                            data-large-mode="true"
-                            value="<?php echo $value->getDate_dexpiration() ?>"
-                          />
-                        </div>
-                        <div class="form-group mb-3 col-xs-12 col-sm-6">
-                          <label
-                            for="stock"
-                            >Quantite de stock
-                          </label>
-                          <input
-                            id="stock"
-                            name="quantite_stock"
-                            type="text"
-                            class="form-control validate"
-                            required
-                            value="<?php echo $value->getQuantite_stock() ?>"
-                          />
-                        </div>
-                  </div>
-                  
-              </div>
-              <div class="col-xl-6 col-lg-6 col-md-12 ">
-                <div class=" mx-auto">
-                <img src="./img/<?php echo $value->getPhoto()?>" class="tm-product-img-dummy mx-auto" alt="">
                 </div>
-                <div class="custom-file mt-3 mb-3">
-                  
-                <input
-                    
-                    class="btn btn-primary btn-block mx-auto col-lg-6"
-                    value="UPLOAD PRODUCT IMAGE"
-                   
-                   type="file" name="image"
-                  />
+
+                <div class="col-md-12">
+                  <label for="description" class="form-label"></label>
+                  <input type="text" required name="description" class="form-control text-center" id="inputPrix" placeholder="Description du produit">
                 </div>
+
+
+                
+                <div class="col-md-4">
+                  <label for="stock" class="control-label mb-1"></label>
+                  <input id="cc-exp"  placeholder="Quantite de stock" value="<?php echo $value->getQuantite_stock() ?>" name="quantite_stock" type="number" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration"data-val-cc-exp="Please enter a valid month and year" autocomplete="cc-exp">
+                  <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
+                </div>
+
+                <div  class="col-md-4">
+                  <label for="expire_date" class="control-label mb-1"></label>
+                  <input id="cc-exp" name="date_d'expiration" type="date"  value="<?php echo $value->getDate_dexpiration() ?>" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration"data-val-cc-exp="Please enter a valid month and year" autocomplete="cc-exp">
+                  <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
               </div>
-              <div class="col-12">
-                <button type="submit" class="btn btn-primary btn-block text-uppercase">Ajouter</button>
-              </div>
-            </form>
-                                    </div>
-                                    </div>
-                                           
-                                           
-                                           
-                                            
-                                           
-                                         </div>
-                                        
-                                    </div>
-                                </div>
-                                <!-- fin -->                        
-                            <div class="col-md-12">
-                                
-                            </div>
-                        </div>
+
+              <div class="col-md-4">
+                    <div class=" mx-auto">
+                        <img src="./img/<?php echo $value->getPhoto()?>" class="tm-product-img-dummy mx-auto" alt="">
                     </div>
+                    <div class="custom-file mt-3 mb-3">
+                        <input class="btn btn-primary btn-block mx-auto col-lg-6" value="UPLOAD PRODUCT IMAGE" type="file" name="image"/>
+                    </div>
+              </div> 
+
+              <div class="container row justify-content-center col-sm-12" style="padding-top: 20px; margin-left: 10px; margin-right:10px;">
+                  <button id="submitButton" type="submit" class="btn btn-primary " name="submit">Ajouter</button>
                 </div>
+
+
+              </form>
+
             </div>
+          </div>
         </div>
+      </div>
 
-    </div>
 
 
-    <!-- Jquery JS-->
-    <script src="vendor/jquery-3.2.1.min.js"></script>
-    <!-- Bootstrap JS-->
-    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
-    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
-    <!-- Vendor JS       -->
-    <script src="vendor/slick/slick.min.js">
-    </script>
-    <script src="vendor/wow/wow.min.js"></script>
-    <script src="vendor/animsition/animsition.min.js"></script>
-    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
-    </script>
-    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
-    <script src="vendor/counter-up/jquery.counterup.min.js">
-    </script>
-    <script src="vendor/circle-progress/circle-progress.min.js"></script>
-    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
-    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
-    <script src="vendor/select2/select2.min.js">
-    </script>
 
-    <!-- Main JS-->
-    <script src="js/main.js"></script>
 
-</body>
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/jquery.sticky.js"></script>
+      <script src="js/main.js"></script>
+  </body>
 
 </html>
-<!-- end document-->
