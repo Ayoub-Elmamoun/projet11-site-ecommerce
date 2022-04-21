@@ -51,6 +51,7 @@
               <a class="nav-link" href="./table.php">Naviger Produits</a>
             </li>
             <li class="nav-item">
+              
               <a class="nav-link" href="../categorie/index.php">Gestion Categorie</a>
             </li>
           </ul>
@@ -71,14 +72,13 @@
           <div class="card ">
 
             <div class="card-body table table-bordered" id="card-body">
-
+            <?php  require_once "suprimer.php";?>
               <table class="table" id="worksTable"> 
                 <thead>
                   <tr class="text-center">
                     <th class="text-center">Nom de Produit</th>
                     <th class ="text-center">Categorie de produit</th>
                     <th class="text-center">Unité</th>
-                    <th class ="text-center">Description de produit</th>
                     <th class ="text-center">Quantité en stock</th>
                     <th class="text-center">Actions</th>
 
@@ -92,13 +92,13 @@
                                                 
                         <td><?php echo $value->getNom_Produit() ?></td>
                         <td><?php echo $value->getNom_Categorie() ?></td>
-                        
+
                         <td><?php echo $value->getPrix() ?></td>
                         <td><?php echo $value->getQuantite_stock() ?></td>
                                                     
                         <td class="d-flex"> 
                             <button class="btn btn-primary justify-content-center" style="margin-right:10px;"><a style="color:black;"  href="modifier.php?id=<?php echo $value -> getId_Produit() ?>">Editer</a></button>
-                            <button class="btn btn-danger" style="margin-right:10px;"><a style="color:black;" href="suprimer.php?id=<?php echo $value -> getId_Produit() ?>" >Supprimer</button>
+                            <button class="btn btn-danger" style="margin-right:10px;"><a style="color:black;" href="suprimer.php?id=<?php echo $value -> getId_Produit() ?>">Supprimer</a></button>
 
                         </td>
                     </tr>
