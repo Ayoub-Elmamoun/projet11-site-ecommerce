@@ -1,21 +1,12 @@
-
 <?php
- require_once "./test/connection.php";
- 
- if (isset($_POST['delete'])) {
+    include "gestion.php";
 
- 
-     // delete from database
-     $id = $_POST['delete'];
+if(isset($_GET['id'])){
 
-     $sql = "DELETE * FROM produit WHERE id_produit= '$id'";
-     
-     if ($conn->query($sql) === TRUE) {
+    // Trouver tous les employés depuis la base de données 
+    $gestion = new Gestion();
+    $id = $_GET['id'] ;
+    $gestion->Supprimer($id);
 
-     } else {
-       echo "Error: " . $sql . "<br>" . $conn->error;
-     }
-     header("Location: table.php");
-   }
-   
-?>
+    header('Location: table.php');
+}

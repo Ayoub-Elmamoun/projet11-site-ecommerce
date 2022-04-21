@@ -52,7 +52,7 @@
             </li>
             <li class="nav-item">
               
-              <a class="nav-link" href="../categorie/index.php">Gestion Categorie</a>
+              <a class="nav-link" href="./categorie.php">Gestion Categorie</a>
             </li>
           </ul>
 
@@ -98,7 +98,7 @@
                                                     
                         <td class="d-flex"> 
                             <button class="btn btn-primary justify-content-center" style="margin-right:10px;"><a style="color:black;"  href="modifier.php?id=<?php echo $value -> getId_Produit() ?>">Editer</a></button>
-                            <button class="btn btn-danger" style="margin-right:10px;"><a style="color:black;" href="suprimer1.php?id=<?php echo $value -> getId_Produit() ?>">Supprimer</a></button>
+                            <button class="btn btn-danger" style="margin-right:10px;"><a style="color:black;" href="suprimer.php?id=<?php echo $value -> getId_Produit() ?>">Supprimer</a></button>
 
                         </td>
                     </tr>
@@ -106,9 +106,8 @@
                                                <?php }?>
                   
                 </tbody>
-
-
               </table>
+
 
             </div>
           </div>
