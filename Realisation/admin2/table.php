@@ -52,7 +52,7 @@
             </li>
             <li class="nav-item">
               
-              <a class="nav-link" href="../categorie/index.php">Gestion Categorie</a>
+              <a class="nav-link" href="./categorie.php">Gestion Categorie</a>
             </li>
           </ul>
 
@@ -106,9 +106,8 @@
                                                <?php }?>
                   
                 </tbody>
-
-
               </table>
+
 
             </div>
           </div>
