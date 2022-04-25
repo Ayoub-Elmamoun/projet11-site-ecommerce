@@ -1,3 +1,9 @@
+
+
+/* create datbase and put all shit on it */
+
+CREATE DATABASE livecoding; 
+
 USE livecoding;
 CREATE TABLE categorie(
     id_categorie int PRIMARY KEY AUTO_INCREMENT,
