@@ -41,7 +41,7 @@ CREATE TABLE categories(
 
     CREATE TABLE ligne_panier(
     id_ligne_panier int PRIMARY KEY AUTO_INCREMENT,
-    idproduit int(11),FOREIGN KEY(idproduit) REFERENCES produit.id,
-    idpanier int(11),FOREIGN KEY(idpanier) REFERENCES panier.id,
+    idproduit int(11),FOREIGN KEY(idproduit) REFERENCES produit(id),
+    idpanier int(11),FOREIGN KEY(idpanier) REFERENCES panier(id),
     produit_quantitePanier varchar(255)
 );
