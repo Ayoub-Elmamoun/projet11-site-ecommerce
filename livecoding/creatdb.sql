@@ -29,7 +29,7 @@ CREATE TABLE categories(
         modePass varchar(255),
         email varchar (255),
         role varchar (255)
-    )
+    );
 
 
     CREATE TABLE panier (
