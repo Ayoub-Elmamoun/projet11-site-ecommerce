@@ -1,45 +1,27 @@
-USE `livecoding`;
+USE livecoding;
+CREATE TABLE categorie(
+    id_categorie int PRIMARY KEY AUTO_INCREMENT,
+    nom_categorie varchar(255) NOT NULL
+);
 
-CREATE TABLE categories(
-    
+
+
+CREATE TABLE produit (id int(11) PRIMARY KEY AUTO_INCREMENT,
+nom varchar(255) NOT NULL,description varchar(255) NOT NULL,
+quantiti int(11) NOT NULL,
+ prix decimal(10) NOT NULL,
+categorie_produit int(11) NOT NULL ,
+FOREIGN KEY(categorie_produit) REFERENCES categorie(id_categorie)
+,photo varchar(255) NOT NULL); 
+
+
+USE livecoding;
+CREATE TABLE panier(
     id int PRIMARY KEY AUTO_INCREMENT,
-    categoryName varchar (255),
-    description varchar(255)
+    reference_visiteur varchar(255) NOT NULL
     
-   );
-
-   INSERT INTO categories(categoryName,description) 
-   VALUES('hair care','products for hair care');
-
-   CREATE TABLE products(
-    
-    id int PRIMARY KEY AUTO_INCREMENT,
-    productName varchar (255),
-    description varchar(255),
-    price float,
-    idCategory int ,FOREIGN KEY(idCategory) REFERENCES categories (id)
-    
-    );
-
-    CREATE TABLE utilisateur(
-
-        id int PRIMARY KEY AUTO_INCREMENT,
-        nom varchar(255),
-        prenom varchar(255),
-        modePass varchar(255),
-        email varchar (255),
-        role varchar (255)
-    );
-
-
-    CREATE TABLE panier (
-        id int PRIMARY KEY AUTO_INCREMENT,
-         Reference_Visituer varchar(255) 
-         
-         );
-
-
-    CREATE TABLE ligne_panier(
+);
+CREATE TABLE ligne_panier(
     id_ligne_panier int PRIMARY KEY AUTO_INCREMENT,
     idproduit int(11),FOREIGN KEY(idproduit) REFERENCES produit(id),
     idpanier int(11),FOREIGN KEY(idpanier) REFERENCES panier(id),
