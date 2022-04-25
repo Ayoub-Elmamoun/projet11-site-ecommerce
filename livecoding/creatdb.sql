@@ -38,10 +38,6 @@ CREATE TABLE categories(
          
          );
 
- CREATE TABLE Ligne_Panier(
-
-    Quantité_Panier_Produit varchar(255)
-    );
 
     CREATE TABLE ligne_panier(
     id_ligne_panier int PRIMARY KEY AUTO_INCREMENT,
