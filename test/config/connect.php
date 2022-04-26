@@ -1,7 +1,7 @@
 <?php
- class database {
+ class dataBase {
 
-    public function connect_db(){
+    public function connectDb(){
 
         $connect=null;
         if ($connect == null) {
@@ -16,9 +16,7 @@
         // if not connected disply that shitty messge
         
         else {
-            $message='cannot access brother';
-            throw new exeption ($message);                
-        };
+            echo 'cannot access brother';
         return $connect; 
     }
  }
