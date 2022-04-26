@@ -1,6 +1,6 @@
 <?php 
 
-require_once 'config/connect.php';
+require '../config/config.php';
 
 ?>
 

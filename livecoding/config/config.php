@@ -16,4 +16,5 @@ class dataBase{
         }
         return $connect;
     }
+}
 ?>
