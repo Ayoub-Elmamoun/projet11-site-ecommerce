@@ -9,7 +9,7 @@
             $connect = myslqi_connect('localhost','root','', 'livecoding');
 
             else (
-                $message='bro there is a database error';
+                $message='cannot access brother';
                 throw new exeption ($message);
             )
         }
