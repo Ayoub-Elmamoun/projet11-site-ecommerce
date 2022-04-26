@@ -1,26 +1,33 @@
 <?php
- class dataBase {
 
-    public function connectDb(){
 
-        $connect=null;
-        if ($connect == null) {
+class dataBase { 
 
-            // try to connect to database
+    public function connectDB() {
+
+
+        $connect = null ;
+
+        if($connect == null):
 
             $connect = mysqli_connect('localhost','root','', 'livecoding');
 
+        else:
 
-        }
+            $message = "database error";
 
-        // if not connected disply that shitty messge
+            throw new exception($message);
+    
         
-        else {
-            echo 'cannot access brother';
-        return $connect; 
+        endif;
+
+        return $connect;
     }
- }
 }
+
+
+
+
 
 
 ?>
