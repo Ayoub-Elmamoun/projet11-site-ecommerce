@@ -1,3 +1,10 @@
+<?php
+
+require "../config/connect.php";
+require "../entities/product.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
