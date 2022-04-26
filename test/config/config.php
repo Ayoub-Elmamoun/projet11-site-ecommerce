@@ -8,7 +8,7 @@
 
             // try to connect to database
 
-            $connect = myslqi_connect('localhost','root','', 'livecoding');
+            $connect = mysqli_connect('localhost','root','', 'livecoding');
 
 
         }
@@ -20,6 +20,7 @@
         return $connect; 
     }
  }
+}
 
 
 ?>
