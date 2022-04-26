@@ -8,7 +8,6 @@ class dataBase{
         if ($connect == null) {
 
             // try to connect to database
-
             $connect = myslqi_connect('localhost','root','', 'livecoding');
         }
         else {
@@ -16,5 +15,6 @@ class dataBase{
         }
         return $connect;
     }
+
 }
 ?>
