@@ -15,5 +15,5 @@ class dataBase{
             echo 'cannot connect buddy';
         }
         return $connect;
-    };
+    }
 ?>
