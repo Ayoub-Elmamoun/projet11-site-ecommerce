@@ -26,7 +26,7 @@ $data = $productManager->getAllProducts();
         <?php foreach($data as $product){ ?>
 
                     <div class=" d-flex flex-column  align-item-center">
-                        <img src="../asset/images/images.png">
+                        <img src="../">
                         <h2><?php echo $product->getProductName(); ?></h2>
                         <h4><?php echo $product->getDetails() ?></h4>
                         <p><?php echo $product->getPrice() . " DH" ?></p>
