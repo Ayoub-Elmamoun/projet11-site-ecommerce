@@ -20,12 +20,15 @@ $data = $productManager->getAllProducts();
     <header>
         <nav class='container bg-dark text-white d-flex flex-row justify-content-evenly'>
             <h1>e-commerce</h1>
+            <div class ="align-items-center d-flex">
+            <a href="cart.php" class =" text-decoration-none">cart</a>
+            </div>
         </nav>
     </header>
         <div class="product">
             <p class ="text-center product-shild">OUR PRODUCTS</p>
         </div>
-        <hr >
+        <hr>
     </section>
     <main>
         <section class="container  text-center mt-5 d-flex flex-row justify-content-evenly">
