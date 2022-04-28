@@ -5,6 +5,7 @@ require '../entities/product.php';
 
 class productManager {
 
+
     public function getAllProducts(){
 
         $configDB = new dataBase();
@@ -65,7 +66,7 @@ class productManager {
     }
 
     public function getCart(){
-        
+
         if (isset($_SESSION['cart'])) {
             return $_SESSION['cart'];
         }

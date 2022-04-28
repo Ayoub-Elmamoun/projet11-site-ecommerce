@@ -5,6 +5,8 @@ $data = $productManager->getAllProducts();
 
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,6 +31,9 @@ $data = $productManager->getAllProducts();
             <p class ="text-center product-shild">OUR PRODUCTS</p>
         </div>
         <hr>
+    </section>
+    <section>
+        
     </section>
     <main>
         <section class="container  text-center mt-5 d-flex flex-row justify-content-evenly">

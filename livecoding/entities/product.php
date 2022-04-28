@@ -7,6 +7,7 @@ class product {
     private $productName;
     private $price;
     private $details;
+    private $categorie_name;
 
 
     public function setId($id){
@@ -50,6 +51,26 @@ class product {
 
         return $this->details;
     }
+
+    public function setcategorie_name($categorie_name){
+
+        $this->categorie_name = $categorie_name;
+    }
+
+    public function getcategorie_name(){
+
+        return $this->categorie_name;
+    }
+
+
+    public function getId_Categorie() {
+        return $this->id;
+    }
+    public function setId_Categorie($id) {
+        $this->id = $id;
+    }
+
+
 }
 
 
