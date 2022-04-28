@@ -22,6 +22,11 @@ $data = $productManager->getAllProducts();
             <h1>e-commerce</h1>
         </nav>
     </header>
+        <div class="product">
+            <p class ="text-center product-shild">OUR PRODUCTS</p>
+        </div>
+        <hr >
+    </section>
     <main>
         <section class="container  text-center mt-5 d-flex flex-row justify-content-evenly">
 

@@ -12,9 +12,7 @@ if(isset($_GET)){
 }
 
 
-// echo "<pre>";
-// print_r($data);
-// echo "</pre>";
+
 
 
 ?>
