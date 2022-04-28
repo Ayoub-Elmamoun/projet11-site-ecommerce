@@ -1,7 +1,7 @@
 <?php
 include "../manager/categorieManager.php";
 
-echo $_SERVER['REQUEST_METHOD'];
+
 $Manager = new categorieManager();
 
 $data = $Manager->getProduitCategorie();
