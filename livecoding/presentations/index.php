@@ -2,20 +2,6 @@
 require '../manager/productManager.php';
 $productManager = new productManager ();
 
-include "../manager/categorieManager.php";
-
-
-$Manager = new categorieManager();
-
-$data = $Manager->getProduitCategorie();
-include "../manager/categorieManager.php";
-
-
-$Manager = new categorieManager();
-
-$data = $Manager->getProduitCategorie();
-
-
 ?>
 
 
@@ -48,18 +34,7 @@ $data = $Manager->getProduitCategorie();
         <hr>
 
     <section>
-        <form method="$_GET" >
 
-
-            <table>
-            <?php  foreach($data as $value){ ?>
-            <a    href="<?php echo $value->getcategorie_name() ?>.php"><?php echo $value->getcategorie_name() ?></a>
-
-            <?php } ?> 
-
-            </table>
-
-        </form>
     </section>
     <main>
         <section class="container  text-center mt-5 d-flex flex-row justify-content-evenly">
