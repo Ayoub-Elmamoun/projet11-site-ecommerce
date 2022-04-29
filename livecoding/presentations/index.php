@@ -38,8 +38,10 @@ $productManager = new productManager ();
     </section>
     <main>
         <section class="container  text-center mt-5 d-flex flex-row justify-content-evenly">
-
-        <?php foreach($data as $product){ ?>
+        
+        <?php 
+        
+        foreach($data as $product){ ?>
 
                     <div class=" d-flex flex-column  align-item-center">
                         <img src="../asset/images/images.jpg" class ="pic_a">
